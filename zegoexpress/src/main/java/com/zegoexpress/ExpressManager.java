@@ -1,4 +1,4 @@
-package com.tastielivefriends.zegoexpress;
+package com.zegoexpress;
 
 import android.app.Application;
 import android.content.Context;

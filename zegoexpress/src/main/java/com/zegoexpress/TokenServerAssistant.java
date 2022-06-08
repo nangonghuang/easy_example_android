@@ -1,4 +1,4 @@
-package com.tastielivefriends.zegoexpress;
+package com.zegoexpress;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

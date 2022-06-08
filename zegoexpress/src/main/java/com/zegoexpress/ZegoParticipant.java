@@ -1,4 +1,4 @@
-package com.tastielivefriends.zegoexpress;
+package com.zegoexpress;
 
 import im.zego.zegoexpress.constants.ZegoStreamQualityLevel;
 

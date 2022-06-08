@@ -1,4 +1,4 @@
-package com.tastielivefriends.zegoexpress;
+package com.zegoexpress;
 
 import androidx.annotation.IntDef;
 import java.lang.annotation.Retention;

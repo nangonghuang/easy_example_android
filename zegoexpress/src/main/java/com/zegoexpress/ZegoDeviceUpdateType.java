@@ -1,4 +1,4 @@
-package com.tastielivefriends.zegoexpress;
+package com.zegoexpress;
 
 public enum ZegoDeviceUpdateType {
     cameraOpen,

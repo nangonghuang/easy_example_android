@@ -23,7 +23,7 @@
  * questions.
  */
 
-package com.tastielivefriends.zegoexpress;
+package com.zegoexpress;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
