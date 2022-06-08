@@ -69,17 +69,17 @@
 
 
   <com.faceunity.nama.ui.FaceUnityView
-      android:id="@+id/fu_beauty_control"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintBottom_toTopOf="@id/control_view"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"/>
-
-  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/fu_beauty_control"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@id/control_view"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/control_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     app:layout_constraintBottom_toTopOf="@id/logout_room">
 
     <ImageView
@@ -105,13 +105,15 @@
       app:layout_constraintStart_toEndOf="@+id/camera_btn" />
 
     <ImageView
-        android:id="@+id/switch_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/selector_switch_button"
-        android:text="switch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="parent" />
+      android:id="@+id/switch_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/selector_switch_button"
+      android:text="switch"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintStart_toEndOf="@+id/mic_btn" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

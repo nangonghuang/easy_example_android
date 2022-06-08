@@ -32,19 +32,6 @@ public class LoginActivity extends AppCompatActivity {
 
         initZEGOExpressSDK();
 
-        binding.joinLiveAsHost.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onJoinRoomClicked(true);
-            }
-        });
-        binding.joinLiveAsAudience.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onJoinRoomClicked(false);
-            }
-        });
-
         binding.joinVideoCall.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,40 +75,6 @@ public class LoginActivity extends AppCompatActivity {
                         });
                     }
                 });
-    }
-
-    private void onJoinRoomClicked(boolean asHost) {
-        if (!checkAppID()) {
-            Toast.makeText(getApplication(),
-                "please set your appID to AppCenter.java", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (!validateInput()) {
-            Toast.makeText(getApplication(),
-                "input cannot be null", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        PermissionX.init(LoginActivity.this)
-            .permissions(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
-            .request((allGranted, grantedList, deniedList) -> {
-                if (allGranted) {
-                    int mediaOptions = ZegoMediaOptions.autoPlayAudio | ZegoMediaOptions.autoPlayVideo;
-                    if (asHost) {
-                        mediaOptions = mediaOptions |
-                                ZegoMediaOptions.publishLocalAudio | ZegoMediaOptions.publishLocalVideo;
-                    }
-                    joinRoom(binding.joinRoomId.getText().toString(), mediaOptions, new IZegoRoomLoginCallback() {
-                        @Override
-                        public void onRoomLoginResult(int errorCode, JSONObject jsonObject) {
-                            if (errorCode == 0) {
-//                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                                intent.putExtra("asHost", asHost);
-//                                startActivity(intent);
-                            }
-                        }
-                    });
-                }
-            });
     }
 
     private void joinRoom(String roomID, int mediaOptions, IZegoRoomLoginCallback callback) {
