@@ -44,4 +44,5 @@ dependencies {
 
     implementation 'com.github.zegolibrary:express-video:2.18.1'
     implementation 'com.guolindev.permissionx:permissionx:1.6.1'
+    api project(':zegoexpress')
 }

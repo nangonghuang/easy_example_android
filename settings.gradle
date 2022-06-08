@@ -4,6 +4,8 @@ pluginManagement {
         google()
         mavenCentral()
         maven { url 'https://www.jitpack.io' }
+        maven { url 'http://maven.faceunity.com/repository/maven-public/'
+            allowInsecureProtocol = true}
     }
 }
 dependencyResolutionManagement {
@@ -12,7 +14,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url 'https://www.jitpack.io' }
+        maven { url 'http://maven.faceunity.com/repository/maven-public/'
+            allowInsecureProtocol = true}
     }
 }
 rootProject.name = "ExpressSample"
 include ':app'
+include ':faceunity'
+include ':zegoexpress'

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tx_login_room"> Log in to the room </string>
+    <string name="tx_publishing"> Pushing stream </string>
+    <string name="tx_publish_fail"> Push stream failed </string>
+
+    <string name="tx_stop_publish_finish"> Stop pushing stream completion </string>
+
+
+</resources>
